@@ -1,0 +1,4 @@
+0.04
+perl(DBICx::TestDatabase)
+perl(DBIx::Class)
+perl(Module::Install)
