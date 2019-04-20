@@ -4,10 +4,10 @@
 #
 Name     : perl-DBIx-Class-DynamicDefault
 Version  : 0.04
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
-Summary  : 'Automatically set and update fields'
+Summary  : Automatically set and update fields
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -22,6 +22,7 @@ No detailed description available
 Summary: dev components for the perl-DBIx-Class-DynamicDefault package.
 Group: Development
 Provides: perl-DBIx-Class-DynamicDefault-devel = %{version}-%{release}
+Requires: perl-DBIx-Class-DynamicDefault = %{version}-%{release}
 
 %description dev
 dev components for the perl-DBIx-Class-DynamicDefault package.
