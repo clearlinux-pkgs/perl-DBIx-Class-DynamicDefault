@@ -4,12 +4,13 @@
 #
 Name     : perl-DBIx-Class-DynamicDefault
 Version  : 0.04
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
-Summary  : Automatically set and update fields
+Summary  : 'Automatically set and update fields'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-DBIx-Class-DynamicDefault-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(DBICx::TestDatabase)
 BuildRequires : perl(DBIx::Class)
@@ -28,14 +29,24 @@ Requires: perl-DBIx-Class-DynamicDefault = %{version}-%{release}
 dev components for the perl-DBIx-Class-DynamicDefault package.
 
 
+%package perl
+Summary: perl components for the perl-DBIx-Class-DynamicDefault package.
+Group: Default
+Requires: perl-DBIx-Class-DynamicDefault = %{version}-%{release}
+
+%description perl
+perl components for the perl-DBIx-Class-DynamicDefault package.
+
+
 %prep
 %setup -q -n DBIx-Class-DynamicDefault-0.04
+cd %{_builddir}/DBIx-Class-DynamicDefault-0.04
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -58,8 +69,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/DBIx/Class/DynamicDefault.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/DBIx::Class::DynamicDefault.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/DBIx/Class/DynamicDefault.pm
