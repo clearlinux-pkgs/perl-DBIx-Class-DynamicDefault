@@ -4,7 +4,7 @@
 #
 Name     : perl-DBIx-Class-DynamicDefault
 Version  : 0.04
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Summary  : 'Automatically set and update fields'
@@ -76,4 +76,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/DBIx/Class/DynamicDefault.pm
+/usr/lib/perl5/vendor_perl/5.30.3/DBIx/Class/DynamicDefault.pm
