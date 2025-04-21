@@ -7,7 +7,7 @@
 #
 Name     : perl-DBIx-Class-DynamicDefault
 Version  : 0.04
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/DBIx-Class-DynamicDefault-0.04.tar.gz
 Summary  : 'Automatically set and update fields'
